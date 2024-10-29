@@ -1,0 +1,48 @@
+return (
+    <div className='movie'>
+        <div className='big-c'>
+            <div className='search'>
+                <span><h2 className='t' onClick={()=>navigator("/")}>TV SERIES</h2></span>
+                <div>
+                    SEARCH
+                    <button><img src='./search.svg'/></button>
+                </div>
+            </div>
+            <div className='content'>
+                <ul>
+                    <li onClick={()=>navigator('/content')}>
+                        <figure>
+                            <img src='https://image.tmdb.org/t/p/original/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg'/>
+                            <figcaption>Inside Out 2</figcaption>
+                        </figure>
+                    </li>
+                    <li onClick={()=>navigator('/content')}>
+                        <figure>
+                            <img src='https://image.tmdb.org/t/p/original/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg'/>
+                            <figcaption>Inside Out 2</figcaption>
+                        </figure>
+                    </li>
+                    <li onClick={()=>navigator('/content')}>
+                        <figure>
+                            <img src='https://image.tmdb.org/t/p/original/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg'/>
+                            <figcaption>Inside Out 2</figcaption>
+                        </figure>
+                    </li>
+                    <li onClick={()=>navigator('/content')}>
+                        <figure>
+                            <img src='https://image.tmdb.org/t/p/original/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg'/>
+                            <figcaption>Inside Out 2</figcaption>
+                        </figure>
+                    </li>
+                    <li onClick={()=>navigator('/content')}>
+                        <figure>
+                            <img src='https://image.tmdb.org/t/p/original/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg'/>
+                            <figcaption>Inside Out 2</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <button>MORE<img src='./down.svg'/></button>
+            </div>
+        </div>
+    </div>
+)

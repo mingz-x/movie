@@ -1,0 +1,42 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useRef, useEffect } from 'react'
+
+const Detail = ({name, on, title, data}) => {
+    let navigator = useNavigate()
+    // const ref = useRef()
+    const scrollRef = useRef()
+  
+    // const scrollRef = useRef(null);
+    // useEffect(() => {
+    // scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    // });
+
+    /* element.scrollIntoView({ behavior: "smooth" }) */
+
+
+  return (
+    <div className='detail'>
+        <span><h2 className={name} onClick={()=>navigator(on)}>{title}</h2></span>
+        {
+            data.map((obj,k)=>
+                (k<1) ? (
+                    <div key={obj.id} className='top-D'>
+                        <div className='top'>
+                            <div>
+                                <h2>{obj.title}</h2>
+                                <p>{obj.overview}</p>
+                                <div><h3 onClick={()=>scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" })}>WATCH NOW</h3></div>
+                            </div>
+                            <figure><img src={'https://image.tmdb.org/t/p/original/'+obj.poster_path}/></figure>
+                        </div>
+                        <div className='bgimg'><img src={'https://image.tmdb.org/t/p/original/'+obj.backdrop_path}/></div>
+                    </div>
+                ) : ''
+            )
+        }
+    </div>
+  )
+}
+
+export default Detail
